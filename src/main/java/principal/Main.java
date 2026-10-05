@@ -2,7 +2,19 @@ package principal;
 
 import modelo.*;
 
+/**
+ * Main class of the order management system.
+ * It creates some products, customers and orders and prints their summaries.
+ *
+ * @author Javier
+ * @version 1.0
+ */
 public class Main {
+    /**
+     * Entry point of the program.
+     *
+     * @param args command line arguments (not used)
+     */
     public static void main(String[] args) {
         System.out.println("SISTEMA DE GESTION DE PEDIDOS");
 

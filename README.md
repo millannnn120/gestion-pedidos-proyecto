@@ -1,18 +1,79 @@
-## Getting Started
+# Order Management System (Gestión de Pedidos)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Project overview
 
-## Folder Structure
+Simple Java console application that manages customer orders. It was made for the
+*Entornos de Desarrollo* subject and it shows basic object-oriented programming:
+inheritance, abstract classes and polymorphism.
 
-The workspace contains two folders by default, where:
+Main classes (package `modelo`):
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+| Class | Description |
+|-------|-------------|
+| `Cliente` | Customer: name, email and address |
+| `Producto` | Abstract class for every product (name and base price) |
+| `ProductoFisico` | Physical product: price + 21% VAT + shipping cost |
+| `ProductoDigital` | Digital product: price + 21% VAT - 15% discount |
+| `Pedido` | Order of a customer with a list of products and its total |
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+The class `principal.Main` creates some products, customers and orders and prints
+a summary of each order.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Prerequisites
 
-## Dependency Management
+- [Java JDK 17](https://adoptium.net/) or higher
+- [Apache Maven](https://maven.apache.org/) 3.6 or higher
+- [Git](https://git-scm.com/)
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+You can check your versions with:
+
+```bash
+java -version
+mvn -version
+git --version
+```
+
+## Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/millannnn120/gestion-pedidos-proyecto.git
+   cd <your-repository>
+   ```
+
+2. Compile the project:
+
+   ```bash
+   mvn compile
+   ```
+
+3. Run the program:
+
+   ```bash
+   mvn exec:java -Dexec.mainClass="principal.Main"
+   ```
+
+   Or, without the exec plugin:
+
+   ```bash
+   java -cp target/classes principal.Main
+   ```
+
+4. Run the unit tests (JUnit 5):
+
+   ```bash
+   mvn test
+   ```
+
+5. (Optional) Generate the Javadoc HTML documentation:
+
+   ```bash
+   mvn javadoc:javadoc
+   ```
+
+   The result is created in `target/site/apidocs/index.html`.
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a Pull Request.
