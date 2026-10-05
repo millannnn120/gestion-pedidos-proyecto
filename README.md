@@ -19,6 +19,17 @@ Main classes (package `modelo`):
 The class `principal.Main` creates some products, customers and orders and prints
 a summary of each order.
 
+## Project structure
+
+The project follows a simple Maven structure:
+
+- `src/main/java/modelo/` contains the main domain classes.
+- `src/main/java/principal/` contains the application entry point.
+- `src/test/java/` contains the unit tests.
+- `pom.xml` contains the Maven project configuration.
+- `README.md` contains the project documentation.
+- `CONTRIBUTING.md` contains the contribution guidelines.
+
 ## Prerequisites
 
 - [Java JDK 17](https://adoptium.net/) or higher
